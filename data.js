@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const videoGallery = document.getElementById('videoGallery');
-    const dataFile = 'https://github.com/quang38/datatrangcanhan/data.json'; // Đường dẫn tới tệp JSON
+    const dataFile = './data.json'; // Đường dẫn tới tệp JSON
 
     fetch(dataFile)
         .then(response => {
