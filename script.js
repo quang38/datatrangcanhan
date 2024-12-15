@@ -18,7 +18,7 @@ function toggleLanguage() {
 
     elementsToChange.forEach(element => {
         const el = document.getElementById(element.id);
-        const currentText = isEnglish ? element.vi : element.en;
+        const currentText = isEnglish ? element.en : element.vi;
 
         // Áp dụng hiệu ứng mượt mà
         el.classList.add('fade-out');
@@ -28,4 +28,6 @@ function toggleLanguage() {
             el.classList.add('fade-in');
         }, 300); // Chờ đợi trước khi thay đổi nội dung
     });
+
+    // Các liên kết trong danh sách không thay đổi, vì vậy chúng không được đưa vào trong mảng `elementsToChange`.
 }
