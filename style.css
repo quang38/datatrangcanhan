@@ -1,0 +1,308 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #1e1e2f, #131324);
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #6d44f2, #9b59b6);
+    text-align: center;
+    padding: 70px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 10%, transparent 60%);
+    animation: pulse 10s infinite;
+    z-index: 0;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.gamer-name {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeInDown 1.5s ease;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-top: 10px;
+    position: relative;
+    z-index: 1;
+    color: #f0f0f0;
+    animation: fadeInUp 1.5s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Styles */
+section {
+    margin: 40px 0;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(41, 41, 63, 0.9);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #6d44f2;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #9b59b6;
+    margin: 10px auto;
+    animation: expand 0.5s ease;
+}
+
+@keyframes expand {
+    from {
+        width: 0;
+    }
+    to {
+        width: 50px;
+    }
+}
+
+p, li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+/* Social Links */
+.social-links {
+    text-align: center;
+}
+
+.social-links ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.social-links a {
+    color: #6d44f2;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: #9b59b6;
+    transform: scale(1.1);
+}
+
+/* Stats Section */
+.stats ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.stats strong {
+    color: #6d44f2;
+}
+
+/* Video Gallery */
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+iframe:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: fadeIn 1.2s ease;
+}
+
+input, textarea, button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+input, textarea {
+    width: 100%;
+    background-color: #1e1e2f;
+    color: #fff;
+    border: 1px solid #6d44f2;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #9b59b6;
+}
+
+button {
+    background-color: #6d44f2;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #9b59b6;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #131324;
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Button Styling */
+button {
+    background-color: #6d44f2;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #9b59b6;
+}
+
+button a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+/* Add styling for the language toggle button */
+#language-toggle {
+    background-color: #6d44f2;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: background-color 0.3s;
+}
+
+#language-toggle:hover {
+    background-color: #9b59b6;
+}
